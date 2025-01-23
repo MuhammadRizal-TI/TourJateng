@@ -3,19 +3,201 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 28, 28, 30;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+}
+
+.about-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1575573685828-7c1e20f05124?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1lcmJhYnV8ZW58MHx8MHx8fDA%3D');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #059669;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #059669 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Custom checkbox styles */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #3a3a3c;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background: #2C2C2E;
+}
+
+input[type="checkbox"]:checked {
+  background: #7B61FF;
+  border-color: #7B61FF;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Swiper custom styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.3);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
