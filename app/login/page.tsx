@@ -109,7 +109,7 @@ export default function LoginPage() {
               </Button>
             </div>
 
-            <Button className="w-full bg-[#16A34A]  hover:bg-[#16A34A] py-6">
+            <Button className="w-full bg-[#16A34A] hover:bg-[#16A34A] py-6">
               Masuk
             </Button>
 

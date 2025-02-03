@@ -1,15 +1,28 @@
-import { useEffect } from 'react'
-import { useAnimation, useInView } from 'framer-motion'
+"use client"
 
-export const useScrollAnimation = (ref: React.RefObject<HTMLElement>) => {
+import { useEffect } from "react"
+import { useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+
+export function useScrollAnimation(ref: React.RefObject<HTMLElement>) {
   const controls = useAnimation()
-  const inView = useInView(ref, { once: true })
+  const [inViewRef, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  })
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible')
+      controls.start("visible")
     }
   }, [controls, inView])
+
+  // Merge refs
+  useEffect(() => {
+    if (ref.current) {
+      inViewRef(ref.current)
+    }
+  }, [inViewRef, ref])
 
   return controls
 }
