@@ -1,22 +1,27 @@
-import Image from 'next/image'
-import { Hero } from '@/components/hero'
-import { Features } from '@/components/features'
-import { Faq } from '@/components/faq'
-import { Testimonials } from '@/components/testimonials'
-import { Cta } from '@/components/cta'
-import { Partners } from '@/components/partners'
-import { Footer } from '@/components/footer'
+import Hero from "@/components/hero"
+import DestinationHelp from "@/components/tawarantourjateng"
+import Solutions from "@/components/solusi-tourjateng"
+import Destinations from "@/components/data-statistik"
+import NaturalBeauty from "@/components/galeri-destinasi"
+import DiscussionForum from "@/components/forum-diskusi"
+import Articles from "@/components/artikel"
+import Travelbot from "@/components/travelbot"
+import FAQ from "@/components/faq"
+import JoinCommunity from "@/components/join-community"
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen">
       <Hero />
-      <Features />
-      <Faq />
-      <Testimonials />
-      <Cta />
-      <Partners />
-      <Footer />
+      <DestinationHelp />
+      <Solutions />
+      <Destinations />
+      <NaturalBeauty />
+      <DiscussionForum />
+      <Articles />
+      <Travelbot />
+      <FAQ />
+      <JoinCommunity />
     </main>
   )
 }

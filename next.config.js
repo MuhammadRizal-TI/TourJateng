@@ -10,7 +10,10 @@ const nextConfig = {
         hostname: 'hebbkx1anhila5yf.public.blob.vercel-storage.com',
       },
       {
-        hostname: 'i.ibb.co.com'
+        hostname: 'i.ibb.co.com',
+      },
+      {
+        hostname: 'mediaim.expedia.com'
       }
     ],
   },
