@@ -40,7 +40,7 @@ export default function DestinationGallery() {
     },
     {
       id: 6,
-      name: "Lawang Sewu",
+      name: "Kota Lama",
       description: "Bangunan bersejarah peninggalan Belanda dengan arsitektur megah, sering dianggap mistis, namun menarik secara historis dan arsitektural.",
       location: "Kota Semarang",
       image: "https://pariwisata.semarangkota.go.id/backend/web/upload/wisata/1702998255_kotalama.jpg",

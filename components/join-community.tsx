@@ -28,7 +28,7 @@ export default function JoinCommunity() {
   }
 
   return (
-    <section className="py-32 bg-green-500">
+    <section className="py-16 bg-green-500">
       <motion.div
         className="container mx-auto px-4 text-center"
         variants={containerVariants}
@@ -47,7 +47,7 @@ export default function JoinCommunity() {
         </motion.p>
         <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
-            className="bg-white text-green-500 hover:bg-white/90 hover:text-green-600 gap-2 text-base px-8"
+            className="bg-white text-green-500 hover:bg-black hover:text-white delay-100 gap-2 text-base px-8"
             size="lg"
           >
             Daftar Gratis

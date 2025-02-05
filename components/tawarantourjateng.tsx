@@ -15,7 +15,7 @@ export default function DestinationHelp() {
             />
           </div>
           <div className="w-1/2">
-            <h2 className="text-2xl font-bold text-green-500 mb-4">Bingung Memilih tempat wisata?</h2>
+            <h2 className="text-4xl font-bold text-green-600 mb-4">Bingung Memilih tempat wisata?</h2>
             <p className="text-gray-600 mb-6">
             TourJateng menawarkan begitu banyak keindahan dan pengalaman unik. Dari Candi Borobudur yang megah hingga pesona alam karimunjajwa, pilihan destinasi wisata seolah tak ada habisnya.
             </p>
